@@ -7,7 +7,7 @@ class SayControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get goodbye" do
-    get say_goodbue_url
+    get say_goodbye_url
     assert_response :success
   end
 
