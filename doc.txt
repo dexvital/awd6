@@ -1,0 +1,36 @@
+ rails about
+
+ bin/rails dev:cache
+ bin/rails log:clear LOGS=test
+
+ bin/rails generate scaffold Product title:string description:text image_url:string price:decimal
+ bin/rails generate controller Store index
+ bin/rails generate scaffold LineItem product:references cart:belongs_to
+
+ bin/rails generate migration add_quantity_to_line_items quantity:integer
+ bin/rails generate migration combine_items_in_cart
+ bin/rails generate channel products
+ bin/rails generate scaffold Order name address:text email pay_type:integer
+ bin/rails generate migration add_order_to_line_item order:references
+
+ bin/rails db:migrate
+ bin/rails db:migrate:status
+ bin/rails dbconsole
+
+ curl --silent http://localhost:3004/products/2/who_bought.atom
+
+ mkdir -p app/javascript/PayTypeSelector/ && touch $_/index.jsx
+
+ bin/rails webpacker:install:react
+ bin/rails webpacker:compile
+
+ bin/rails db:test:prepare
+ bin/rails db:seed
+
+ bin/rails text:models
+ bin/rails test:controller
+ bin/rails test test/controllers/line_items_controller_test.rb
+ bin/rails test:system
+ bin/rails test test/system/orders_test.rb:13
+
+ bin/rails generate mailer Order received shipped
