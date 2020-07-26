@@ -21,6 +21,8 @@
 
  mkdir -p app/javascript/PayTypeSelector/ && touch $_/index.jsx
 
+ mkdir -p app/views/support_requests/ && touch $_/index.html.erb
+
  bin/rails webpacker:install:react
  bin/rails webpacker:compile
 
@@ -48,4 +50,11 @@
  >> User.create(name: 'dave', password: 'secret', password_confirmation: 'secret')
  >> User.count
 
-  http://localhost:3000/rails/info/routes
+ http://localhost:3000/rails/info/routes
+
+ bin/rails action_mailbox:install
+ bin/rails g mailbox support
+
+ bin/rails g model support_request
+
+ bin/rails action_text:install
