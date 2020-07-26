@@ -34,3 +34,5 @@
  bin/rails test test/system/orders_test.rb:13
 
  bin/rails generate mailer Order received shipped
+
+  bin/rails generate job charge_order

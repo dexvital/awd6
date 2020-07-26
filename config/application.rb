@@ -17,5 +17,6 @@ module Awd6
     # the framework and any gems in your application.
 
     # config.action_mailer.delivery_method = :smtp #:sendmail, :test
+    config.autoload_paths << Rails.root.join("app/lib")
   end
 end
