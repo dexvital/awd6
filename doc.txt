@@ -35,4 +35,15 @@
 
  bin/rails generate mailer Order received shipped
 
-  bin/rails generate job charge_order
+ bin/rails generate job charge_order
+
+ bin/rails generate scaffold User name:string password:digest
+
+ sqlite3 -line db/development.sqlite3 "select * from users"
+
+ bin/rails generate controller Sessions new create destroy
+ bin/rails generate controller Admin index
+
+ bin/rails console
+ >> User.create(name: 'dave', password: 'secret', password_confirmation: 'secret')
+ >> User.count
