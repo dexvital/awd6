@@ -18,6 +18,7 @@ body {
   padding: 0;
 }
 header.main {
+  min-height: 40px;
   text-align: center; // center on mobile
   @media (min-width: 30em) {
     text-align: left; // left align on desktop
@@ -199,4 +200,9 @@ nav.logged_in_nav {
   input[type="submit"]:hover {
     color: white;
   }
+}
+
+.locale {
+  float: right;
+  margin: 1em;
 }

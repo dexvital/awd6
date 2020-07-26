@@ -18,5 +18,8 @@ module Awd6
 
     # config.action_mailer.delivery_method = :smtp #:sendmail, :test
     config.autoload_paths << Rails.root.join("app/lib")
+
+    # makes sure that the JavaScript copy of our translations is in sync with those in config/locales
+    config.middleware.use I18n::JS::Middleware
   end
 end
