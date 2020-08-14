@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_26_160340) do
+ActiveRecord::Schema.define(version: 2020_08_14_060539) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.string "number"
+    t.decimal "balance", precision: 10, scale: 2, default: "0.0"
+  end
 
   create_table "action_mailbox_inbound_emails", force: :cascade do |t|
     t.integer "status", default: 0, null: false
