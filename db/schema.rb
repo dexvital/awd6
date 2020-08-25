@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_14_060539) do
+ActiveRecord::Schema.define(version: 2020_08_25_105822) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "number"
@@ -81,6 +81,13 @@ ActiveRecord::Schema.define(version: 2020_08_14_060539) do
     t.integer "pay_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.string "comment"
+    t.string "name"
+    t.string "content_type"
+    t.binary "data", limit: 1048576
   end
 
   create_table "products", force: :cascade do |t|

@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :support_requests, only: [ :index, :update ]
 
+  resources :pictures
+
   scope '(:locale)' do
     resources :orders
     resources :line_items
