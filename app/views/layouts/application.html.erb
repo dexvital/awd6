@@ -5,7 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script type="text/javascript">
       I18n.defaultLocale = "<%= I18n.default_locale %>";
@@ -25,7 +26,7 @@
         <% end %>
       </aside>
       <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
-      <h1><%= page_title %></h1>
+      <h1><%= @page_title %></h1>
     </header>
     <section class="content">
       <nav class="side_nav">
